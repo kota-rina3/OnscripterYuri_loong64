@@ -250,7 +250,7 @@ sh -c "export BUILD_TYPE=Debug && ./local_linux32.sh"
 
 and then use `local_linux32.sh` or `local_linux64.sh` to build.  
 
-# linux64_loong64 (deepin)
+### linux64_loong64 (deepin)
 ``` sh
 sudo apt update
 sudo apt install -y gcc gdb make cmake git curl install libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev libbz2-dev libjpeg-dev libpng-dev liblua5.4-dev libgl1-mesa-dev
@@ -258,7 +258,7 @@ cd OnscripterYuri_loong64/script
 sudo chmod +x *.sh
 sh -c "export BUILD_TYPE=Debug && ./local_linux_loong64.sh"
 ```
-> 如果启动游戏后无反应，请检查游戏目录是否有default.ttf。若无，请随便找个字体文件，文件名改为default，再放进游戏目录。
+> 启动游戏时无反应？请检查游戏目录是否有default.ttf。若无，请随便找个字体文件，文件名改为default，再放进游戏目录。
 
 ### (3) cross web  
 
@@ -416,5 +416,6 @@ sudo apt-get install qemu-user-static binfmt-support
 
 - ~~video support (future plan)~~  partly finish by invoke system player  
 - ~~web preloading (future plan)~~ might not need ? lazyload partly solved  
+
 
 
