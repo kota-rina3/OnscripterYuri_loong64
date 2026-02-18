@@ -40,6 +40,7 @@ New features :
   - [x] linux
     - [x] x86, x64 (local compile, static or dynamic link)
     - [x] arm, aarch64 (cross compile, SDL2 build from raspberrypi, static link)
+    - [x] loong64 (loongarch64(abi2.0, called“[新世界](https://areweloongyet.com/docs/old-and-new-worlds)”, local compile, static or dynamic link, built by ricervm(belongs to otohime_soft_room)))
     - [x] retroarch (contributed by [iyzsong](https://github.com/iyzsong))
   - [x] mac
     - [x] x64, arm64 (local compile, contributed by [yujincheng08](https://github.com/yujincheng08))
@@ -249,6 +250,16 @@ sh -c "export BUILD_TYPE=Debug && ./local_linux32.sh"
 
 and then use `local_linux32.sh` or `local_linux64.sh` to build.  
 
+### linux64_loong64 (deepin)
+``` sh
+sudo apt update
+sudo apt install -y gcc gdb make cmake git curl install libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev libbz2-dev libjpeg-dev libpng-dev liblua5.4-dev libgl1-mesa-dev
+cd OnscripterYuri_loong64/script
+sudo chmod +x *.sh
+sh -c "export BUILD_TYPE=Debug && ./local_linuxla64.sh"
+```
+> 启动游戏时无反应？请检查游戏目录是否有default.ttf。若无，请随便找个字体文件，文件名改为default，再放进游戏目录。
+
 ### (3) cross web  
 
 Install [emsdk](https://github.com/emscripten-core/emsdk) and use `cross_web.sh` to build.  
@@ -405,4 +416,6 @@ sudo apt-get install qemu-user-static binfmt-support
 
 - ~~video support (future plan)~~  partly finish by invoke system player  
 - ~~web preloading (future plan)~~ might not need ? lazyload partly solved  
+
+
 
